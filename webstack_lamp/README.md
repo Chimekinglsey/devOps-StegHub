@@ -102,7 +102,7 @@ sudo echo '<?php phpinfo(); ?>' > /var/www/projectlamp/index.php
 
 | Component | Description | Status |
 |-----------|-------------|--------|
-| Linux     | Ubuntu 22 on AWS EC2 | ✅ |
+| Linux     | Ubuntu 24 on AWS EC2 | ✅ |
 | Apache    | Web Server | ✅ |
 | MySQL     | Database Management System | ✅ |
 | PHP       | Server-side Scripting | ✅ |
