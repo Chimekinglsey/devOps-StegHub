@@ -4,7 +4,7 @@
 ![AWS](https://img.shields.io/badge/AWS-EC2-yellow)
 ![DevOps](https://img.shields.io/badge/DevOps-Project-blue)
 
-This DevOps project demonstrates the successful deployment of a **LAMP** stack (Linux, Apache, MySQL, PHP) on an AWS EC2 instance. The project utilizes Ubuntu 22 as the base operating system, Apache as the web server, MySQL as the database management system, and PHP as the server-side scripting language. Additionally, it includes the configuration of Apache virtual hosts to enable hosting multiple websites on the same server.
+This DevOps project demonstrates the successful deployment of a **LAMP** stack (Linux, Apache, MySQL, PHP) on an AWS EC2 instance. The project utilizes Ubuntu 24 as the base operating system, Apache as the web server, MySQL as the database management system, and PHP as the server-side scripting language. Additionally, it includes the configuration of Apache virtual hosts to enable hosting multiple websites on the same server.
 
 ## Skills Acquired
 
@@ -127,7 +127,3 @@ The hands-on experience gained from this project reinforces understanding of clo
 ## Contributing
 
 Contributions to improve this project are welcome. Please fork the repository and submit a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
