@@ -1,5 +1,5 @@
 github:
-https://github.com/Chimekinglsey/devOps-StegHub/blob/main/webstack_lamp
+https://github.com/Chimekinglsey/devOps-StegHub/blob/main/webstack_lemp/
 
 LinkedIn post:
 https://www.linkedin.com/posts/chika-kingsley-chime_devops-cloudcomputing-awscloud-activity-7242851296729284609-peJr/?utm_source=share&utm_medium=member_desktop
