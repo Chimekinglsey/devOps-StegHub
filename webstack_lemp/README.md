@@ -1,5 +1,3 @@
-Certainly! I'll create a table of contents for the markdown and include it within the document. I'll also make some professional corrections where necessary. Here's the updated markdown with the table of contents:
-
 # LEMP Stack Deployment on AWS EC2
 ## Table of Contents
 
