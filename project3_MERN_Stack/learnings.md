@@ -70,6 +70,7 @@ A **database** is a collection of information organized for easy access, managem
 - Created a `routes` folder to handle all routes for the Todo application.
 - In `api.js`, defined routes for creating, viewing, and deleting tasks using HTTP methods (`GET`, `POST`, `DELETE`).
 - Imported the router into `index.js` and used it as middleware.
+![index.js](images/welcome_to_express.png)
 
 ### Setting Up MongoDB:
 - Installed the `mongoose` library for MongoDB connection.
@@ -77,11 +78,13 @@ A **database** is a collection of information organized for easy access, managem
 - Defined the Todo schema in `todo.js`.
 - Setup MongoDB in the cloud using **mLab DBaaS**.
 - Updated environment variables to store the MongoDB connection string in `.env`.
+![mLab DBaas](images/mLab.png)
   
 ### Testing with Postman:
 - Tested creating tasks via `POST` requests with a JSON body.
 - Tested retrieving tasks via `GET` requests.
 - Tested deleting tasks by sending `DELETE` requests with a task ID.
+![postman test](images/postman_test.png)
 
 ---
 
@@ -97,6 +100,7 @@ A **database** is a collection of information organized for easy access, managem
 - Used the `axios` library to make HTTP requests from the frontend to the backend.
 - Updated `ListTodo` to fetch tasks from the backend API.
 - Added functionality in the `Todo` component to handle form submission and add tasks to the backend.
+![frontend UI](images/react_fronted_ui.png)
 
 ---
 

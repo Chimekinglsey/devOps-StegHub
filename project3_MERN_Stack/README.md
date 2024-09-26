@@ -91,6 +91,7 @@ Todo/
 2. Define the Todo schema and model in `models/todo.js`
 3. Set up environment variables for the database connection string (stored in `connection_string.txt`)
 
+![mLab DBaas](images/mLab.png)
 ### API Routes
 
 Create routes in `routes/api.js` for CRUD operations:
@@ -124,13 +125,13 @@ Create routes in `routes/api.js` for CRUD operations:
    ```
 
 ## API Endpoints
-
+![postman test](images/postman_test.png)
 - `POST /api/todos`: Create a new todo task
 - `GET /api/todos`: Retrieve all todo tasks
 - `DELETE /api/todos/:id`: Delete a specific todo task
+ ![frontend UI](images/react_fronted_ui.png)
 
 ## Learning Outcomes
-
 - Implementation of REST API design principles
 - Understanding of CRUD operations in a full-stack application
 - Database integration using Mongoose and MongoDB
