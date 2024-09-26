@@ -2,9 +2,10 @@
 *.pem
 # dependencies
 /node_modules
-*/node_modules
+*/node_module*/*
 /.pnp
 .pnp.js
+
 
 # testing
 /coverage
