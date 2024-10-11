@@ -6,6 +6,7 @@
 3. [WordPress Installation](#wordpress-installation)
 4. [Learnings](#learnings)
 5. [Self-Study Takeaways](#self-study-takeaways)
+![WordPress](images/wordpress/wordpresss.png)
 
 ---
 
