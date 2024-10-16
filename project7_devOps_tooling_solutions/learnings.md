@@ -129,7 +129,6 @@ sudo systemctl enable httpd
 ---
 
 ## Self Study Takeaways
-
 ### NAS
 NAS (Network Attached Storage) provides file-level storage that allows multiple users and clients to share files over a network. It uses IP protocols, making it easy to scale for small to medium-sized businesses.
 
