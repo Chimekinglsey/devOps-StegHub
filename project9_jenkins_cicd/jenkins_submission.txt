@@ -1,2 +1,1 @@
-LinkedIn Post: 
 GitHub: https://github.com/Chimekinglsey/devOps-StegHub/tree/main/project9_jenkins_cicd

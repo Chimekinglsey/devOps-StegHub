@@ -80,14 +80,14 @@ sudo yum install nfs-utils nfs4-acl-tools -y
 sudo mkdir -p /var/www var/logs /mnt/opt
 
 # Mount NFS shared directories
-sudo mount -t nfs -o rw,nosuid nfs_server_ip:/mnt/apps /var/www
-sudo mount -t nfs -o rw,nosuid nfs_server_ip:/mnt/logs /var/logs
-sudo mount -t nfs -o rw,nosuid nfs_server_ip:/mnt/opt /mnt/opt
+sudo mount -t nfs -o rw,nosuid 172.31.11.52:/mnt/apps /var/www
+sudo mount -t nfs -o rw,nosuid 172.31.11.52:/var/logs /var/logs
+
 
 # Add entries to /etc/fstab
-echo "nfs_server_ip:/mnt/apps /var/www nfs defaults 0 0" | sudo tee -a /etc/fstab
-echo "nfs_server_ip:/mnt/logs /var/logs nfs defaults 0 0" | sudo tee -a /etc/fstab
-echo "nfs_server_ip:/mnt/opt /mnt/opt nfs defaults 0 0" | sudo tee -a /etc/fstab
+echo "172.31.11.52:/mnt/apps /var/www nfs defaults 0 0" | sudo tee -a /etc/fstab
+echo "172.31.11.52:/var/logs /var/logs nfs defaults 0 0" | sudo tee -a /etc/fstab
+# echo "172.31.11.52:/mnt/opt /mnt/opt nfs defaults 0 0" | sudo tee -a /etc/fstab
 
 # Reload systemd and mount the filesystems
 sudo systemctl daemon-reload
@@ -107,7 +107,7 @@ cd tooling
 sudo cp -rp html    /var/www/
 sudo chown -R apache:apache /var/www/html
 sudo systemctl restart httpd
-# sudo setenforce 0
+sudo setenforce 0
 # persist setenforce to 0
 sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 
