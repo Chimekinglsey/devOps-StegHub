@@ -1,0 +1,62 @@
+---
+- name: Update and configure web, NFS, and DB servers
+  hosts: webservers,nfs,dbserver
+  become: yes
+  tasks:
+    - name: Ensure Wireshark is at the latest version on Debian/Ubuntu
+      apt:
+        name: wireshark
+        state: latest
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Ensure Wireshark is at the latest version on RedHat/CentOS
+      yum:
+        name: wireshark
+        state: latest
+      when: ansible_facts['os_family'] == 'RedHat'
+
+
+    - name: Create a test directory
+      file:
+        path: /home/test_directory
+        state: directory
+        mode: '0755'
+
+    - name: Create a file with short content
+      copy:
+        dest: /home/test_directory/test_file.txt
+        content: "This is a test file.\n"
+        mode: '0644'
+
+    - name: Change timezone to Lagos
+      command: timedatectl set-timezone Africa/Lagos
+
+
+- name: Update and configure Load Balancer server
+  hosts: lb
+  become: yes
+  tasks:
+    - name: Update apt repo
+      apt:
+        update_cache: yes
+
+    - name: Ensure Wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Create a test directory
+      file:
+        path: /home/test_directory
+        state: directory
+        mode: '0755'
+
+    - name: Create a file with short content
+      copy:
+        dest: /home/test_directory/test_file.txt
+        content: "This is a test file.\n"
+        mode: '0644'
+
+    - name: Change timezone to Lagos
+      command: timedatectl set-timezone Africa/Lagos

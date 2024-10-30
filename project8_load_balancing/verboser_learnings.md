@@ -54,9 +54,9 @@ This solution uses one NFS server and two web servers on RHEL, one  database ser
 1. Added entries to `/etc/fstab` for persistent mounting using their `blkid UUID`.
 1. Installed `nfs-utils` and configured NFS by editing `/etc/exports` to share directories across instances:
     ```bash
-    /mnt/apps my_server_subnet_cidr(rw,sync,no_root_squash,no_all_squash)
-    /mnt/logs my_server_subnet_cidr(rw,sync,no_root_squash,no_all_squash)
-    /mnt/opt my_server_subnet_cidr(rw,sync,no_root_squash,no_all_squash)
+    /mnt/apps 172.31.0.0/20(rw,sync,no_root_squash,no_all_squash)
+    /mnt/logs 172.31.0.0/20(rw,sync,no_root_squash,no_all_squash)
+    /mnt/opt 172.31.0.0/20(rw,sync,no_root_squash,no_all_squash)
     ```
 1. Verified the NFS exports using:
     ```bash
@@ -80,14 +80,14 @@ sudo yum install nfs-utils nfs4-acl-tools -y
 sudo mkdir -p /var/www var/logs /mnt/opt
 
 # Mount NFS shared directories
-sudo mount -t nfs -o rw,nosuid 172.31.11.52:/mnt/apps /var/www
-sudo mount -t nfs -o rw,nosuid 172.31.11.52:/var/logs /var/logs
+sudo mount -t nfs -o rw,nosuid 172.31.9.220:/mnt/apps /var/www
+sudo mount -t nfs -o rw,nosuid 172.31.9.220:/mnt/logs /var/logs
 
 
 # Add entries to /etc/fstab
-echo "172.31.11.52:/mnt/apps /var/www nfs defaults 0 0" | sudo tee -a /etc/fstab
-echo "172.31.11.52:/var/logs /var/logs nfs defaults 0 0" | sudo tee -a /etc/fstab
-# echo "172.31.11.52:/mnt/opt /mnt/opt nfs defaults 0 0" | sudo tee -a /etc/fstab
+echo "172.31.9.220:/mnt/apps /var/www nfs defaults 0 0" | sudo tee -a /etc/fstab
+echo "172.31.9.220:/mnt/logs /var/logs nfs defaults 0 0" | sudo tee -a /etc/fstab
+# echo "172.31.9.220:/mnt/opt /mnt/opt nfs defaults 0 0" | sudo tee -a /etc/fstab
 
 # Reload systemd and mount the filesystems
 sudo systemctl daemon-reload
@@ -102,6 +102,7 @@ sudo systemctl enable httpd
 
 # Install git and clone the steghub tooling repository
 sudo yum install git mysql -y
+cd ~
 git clone https://github.com/StegTechHub/tooling.git
 cd tooling
 sudo cp -rp html    /var/www/
