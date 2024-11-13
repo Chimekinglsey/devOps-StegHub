@@ -1,0 +1,2 @@
+GitHub: https://github.com/Chimekinglsey/devOps-StegHub/tree/main/project12_ansible_refactoring_and_static_assignments_and_imports
+Linkedin: https://www.linkedin.com/posts/chika-kingsley-chime_ansible-devops-configurationmanagement-activity-7262351481213702144-Q1cz?utm_source=share&utm_medium=member_desktop
